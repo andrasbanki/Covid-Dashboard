@@ -1,32 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Covid19 Dashboard</title>
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-  <link rel="stylesheet" href="styles.css">
-</head>
-<body>
+import AbstractView from "./AbstractView.js";
 
-  <nav class="nav">
+export default class extends AbstractView {
+  constructor() {
+    super();
+    this.setTitle("Germany");
+  }
 
-    <a href="index.html" class="logo">
-      <img src="img/logo.png" alt="Covid19 Dashboard Logo">
-      <span>Covid19 Dashboard</span>
-    </a>
-
-    <ul class="menu">
-      <li class="active"><a href=""><span>Global</span></a></li>
-      <li class="active"><a href=""><span>Germany</span></a></li>
-      <li class="active"><a href=""><span>Austria</span></a></li>
-      <li class="active"><a href=""><span>Switzerland</span></a></li>
-      <li class="active"><a href=""><span>Hungary</span></a></li>
-    </ul>
-
-  </nav>
-
+  async getHtml() {
+    return `
   <main class="content">
 
     <section class="section">
@@ -34,7 +15,7 @@
           <div class="col-xl col-lg col">
             <div class="card shadow ">
               <div class="desc">
-                <p>Total Cases</p>
+                <p>Global Total Cases</p>
                 <span>32232322</span>
               </div>
             </div>
@@ -43,7 +24,7 @@
           <div class="col-xl col-lg col">
             <div class="card shadow">
               <div class="desc">
-                <p>Total Deaths</p>
+                <p>Global Total Deaths</p>
                 <span>2134213123</span>
               </div>
             </div>
@@ -52,7 +33,7 @@
           <div class="col-xl col-lg col">
             <div class="card shadow">
               <div class="desc">
-                <p>Total Vaccine Doses Administered</p>
+                <p>Global Total Vaccine Doses Administered</p>
                 <span>3213132131</span>
               </div>
             </div>
@@ -84,10 +65,6 @@
     </section>
 
   </main>
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-  <script src="js/charts.js"></script>
-  <script src="js/scripts.js"></script>
-</body>
-</html>
+    `; 
+  }
+}

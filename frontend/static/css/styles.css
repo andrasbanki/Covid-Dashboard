@@ -96,7 +96,7 @@ body {
   min-height: 100vh;
   position: relative;
   float: right;
-  background-color: rgba(156,	182,	255, 0.2);
+  background-color: var(--color-1);
 }
 
 /* SECTION */

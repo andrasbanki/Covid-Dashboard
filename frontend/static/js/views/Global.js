@@ -6,8 +6,27 @@ export default class extends AbstractView {
     this.setTitle("Global");
   }
 
+
   async getHtml() {
+
     return `
+    <nav class="nav">
+    <a href="/" class="logo">
+      <img src="static/img/logo.png" alt="Covid19 Dashboard Logo">
+      <span>Covid19 Dashboard</span>
+    </a>
+
+    <hr>
+ 
+    <ul class="menu">
+      <li class="active"><a href="/" data-link>Global</a></li>
+      <li><a href="/austria" data-link>Austria</a></li>
+      <li><a href="/germany" data-link>Germany</a></li>
+      <li><a href="/hungary" data-link>Hungary</a></li>
+      <li><a href="/switzerland" data-link>Switzerland</a></li>
+    </ul>
+
+  </nav>
   <main class="content">
 
     <section class="section">
@@ -16,7 +35,7 @@ export default class extends AbstractView {
             <div class="card shadow ">
               <div class="desc">
                 <p>Global Total Cases</p>
-                <span>32232322</span>
+                <span>248.467.363</span>
               </div>
             </div>
           </div>
@@ -25,7 +44,7 @@ export default class extends AbstractView {
             <div class="card shadow">
               <div class="desc">
                 <p>Global Total Deaths</p>
-                <span>2134213123</span>
+                <span>5.027.183</span>
               </div>
             </div>
           </div>
@@ -33,35 +52,15 @@ export default class extends AbstractView {
           <div class="col-xl col-lg col">
             <div class="card shadow">
               <div class="desc">
-                <p>Global Total Vaccine Doses Administered</p>
-                <span>3213132131</span>
+                <p>Share of people fully vaccinated against COVID-19</p>
+                <span>3.111.302.856</span>
               </div>
             </div>
-          </div>
-
-          <div class="container-fluid container-content charts row">
-            <div class="col-12">
-              <div class="card shadow">
-                <canvas class="shadow" id="chart1"></canvas>
-              </div>
-            </div>
-          </div>
-
-          <div class="container-fluid container-content charts row">           
-              <div class="col-8">
-                <div class="card shadow">
-                  <canvas class="shadow" id="chart2"></canvas>
-                </div>
-              </div>
-
-              <div class="col-4">
-                <div class="card shadow">
-                  <canvas class="shadow" id="chart3"></canvas>
-                </div>
-              </div> 
           </div>
 
         </div>
+
+        <hr>
     </section>
 
   </main>

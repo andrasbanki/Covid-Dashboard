@@ -37,7 +37,9 @@ const getData = (country) => {
           fill: false,
           pointRadius: 2,
           pointHoverRadius: 0.1,
-          borderColor: '#FF808B',
+          pointBackgroundColor: '#FF808B',
+          borderColor: '#9CB6FF',
+          borderWidth: 1,
         }]
       }
     };
@@ -52,7 +54,8 @@ const getData = (country) => {
           fill: false,
           pointRadius: 2,
           pointHoverRadius: 0.1,
-          borderColor: '#FF808B'
+          borderColor: '#FF808B',
+          borderWidth: 1,
         }]
       }
     };
@@ -67,7 +70,8 @@ const getData = (country) => {
           fill: false,
           pointRadius: 2,
           pointHoverRadius: 0.1,
-          borderColor: '#FF808B'
+          borderColor: '#FF808B',
+          borderWidth: 1,
         }]
       }
     };

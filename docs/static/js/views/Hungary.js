@@ -10,17 +10,17 @@ export default class extends AbstractView {
     return `
     <nav class="nav">
 
-      <a href="/" class="logo">
-        <img src="static/img/logo.png" alt="Covid19 Dashboard Logo" class="logo-decor">
+      <a href="./" class="logo">
+        <img src="./static/img/logo.png" alt="Covid19 Dashboard Logo" class="logo-decor">
         <span class="logo-text">Covid19<br> Dashboard</span>
       </a>
 
       <ul class="menu">
-        <li><a href="/" data-link>Global</a></li>
-        <li><a href="/austria" data-link>Austria</a></li>
-        <li><a href="/germany" data-link>Germany</a></li>
-        <li class="active"><a href="/hungary" data-link>Hungary</a></li>
-        <li><a href="/switzerland" data-link>Switzerland</a></li>
+        <li><a href="./" data-link>Global</a></li>
+        <li><a href="./Austria" data-link>Austria</a></li>
+        <li><a href="./Germany" data-link>Germany</a></li>
+        <li class="active"><a href="./Hungary" data-link>Hungary</a></li>
+        <li><a href="./Switzerland" data-link>Switzerland</a></li>
       </ul>
 
     </nav>

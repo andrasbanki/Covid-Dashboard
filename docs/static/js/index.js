@@ -13,7 +13,7 @@ const navigateTo = url => {
 
 const getData = (country) => {
 
-  d3.csv(`static/data/${country}_Covid.csv`).then(function(loadedData) {
+  d3.csv(`./static/data/${country}_Covid.csv`).then(function(loadedData) {
     
     let cases = [];
     let deaths = [];
@@ -157,11 +157,11 @@ const getData = (country) => {
 
 const router = async () => {
   const routes = [
-    { path: "/", view: Global, name: "Global" },
-    { path: "/germany", view: Germany, name: "Germany" },
-    { path: "/austria", view: Austria, name: "Austria" },
-    { path: "/switzerland", view: Switzerland, name: "Switzerland" },
-    { path: "/hungary", view: Hungary, name: "Hungary" },
+    { path: "./", view: Global, name: "Global" },
+    { path: "./Germany", view: Germany, name: "Germany" },
+    { path: "./Austria", view: Austria, name: "Austria" },
+    { path: "./Switzerland", view: Switzerland, name: "Switzerland" },
+    { path: "./Hungary", view: Hungary, name: "Hungary" },
   ];
 
   // TEST

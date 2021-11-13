@@ -11,17 +11,17 @@ export default class extends AbstractView {
     return `
     <nav class="nav">
 
-      <a href="/" class="logo">
-        <img src="static/img/logo.png" alt="Covid19 Dashboard Logo" class="logo-decor">
+      <a href="./" class="logo">
+        <img src="./static/img/logo.png" alt="Covid19 Dashboard Logo" class="logo-decor">
         <span class="logo-text">Covid19<br> Dashboard</span>
       </a>
  
       <ul class="menu">
-        <li class="active"><a href="/" data-link>Global</a></li>
-        <li><a href="/austria" data-link>Austria</a></li>
-        <li><a href="/germany" data-link>Germany</a></li>
-        <li><a href="/hungary" data-link>Hungary</a></li>
-        <li><a href="/switzerland" data-link>Switzerland</a></li>
+        <li class="active"><a href="./" data-link>Global</a></li>
+        <li><a href="./Austria" data-link>Austria</a></li>
+        <li><a href="./Germany" data-link>Germany</a></li>
+        <li><a href="./Hungary" data-link>Hungary</a></li>
+        <li><a href="./Switzerland" data-link>Switzerland</a></li>
       </ul>
 
     </nav>
@@ -92,7 +92,7 @@ export default class extends AbstractView {
           </div>
           <div>
             <div>
-              <img src="/static/img/covid1.png" alt="">
+              <img src="./static/img/covid1.png" alt="">
             </div>
           </div>
           <div>
@@ -110,7 +110,7 @@ export default class extends AbstractView {
           </div>
           <div>
             <div>
-              <img src="/static/img/covid2.png" alt="">
+              <img src="./static/img/covid2.png" alt="">
             </div>
           </div>
           <div>
@@ -128,7 +128,7 @@ export default class extends AbstractView {
           </div>
           <div>
             <div>
-              <img src="/static/img/covid3.png" alt="">
+              <img src="./static/img/covid3.png" alt="">
             </div>
           </div>
           <div>
@@ -146,7 +146,7 @@ export default class extends AbstractView {
           </div>
           <div>
             <div>
-              <img src="/static/img/covid4.png" alt="">
+              <img src="./static/img/covid4.png" alt="">
             </div>
           </div>
           <div>
@@ -163,7 +163,7 @@ export default class extends AbstractView {
           </div>
           <div>
             <div>
-              <img src="/static/img/covid5.png" alt="">
+              <img src="./static/img/covid5.png" alt="">
             </div>
           </div>
           <div>
@@ -182,7 +182,7 @@ export default class extends AbstractView {
           </div>
           <div>
             <div>
-              <img src="/static/img/covid12.png" alt="">
+              <img src="./static/img/covid12.png" alt="">
             </div>
           </div>
           <div>
@@ -200,7 +200,7 @@ export default class extends AbstractView {
           </div>
           <div>
             <div>
-              <img src="/static/img/covid6.jpeg" alt="">
+              <img src="./static/img/covid6.jpeg" alt="">
             </div>
           </div>
           <div>
@@ -218,7 +218,7 @@ export default class extends AbstractView {
           </div>
           <div>
             <div>
-              <img src="/static/img/covid8.png" alt="">
+              <img src="./static/img/covid8.png" alt="">
             </div>
           </div>
           <div>
@@ -236,7 +236,7 @@ export default class extends AbstractView {
           </div>
           <div>
             <div>
-              <img src="/static/img/covid9.png" alt="">
+              <img src="./static/img/covid9.png" alt="">
             </div>
           </div>
           <div>
@@ -254,7 +254,7 @@ export default class extends AbstractView {
           </div>
           <div>
             <div>
-              <img src="/static/img/covid10.png" alt="">
+              <img src="./static/img/covid10.png" alt="">
             </div>
           </div>
           <div>
@@ -273,7 +273,7 @@ export default class extends AbstractView {
           </div>
           <div>
             <div>
-              <img src="/static/img/covid11.png" alt="">
+              <img src="./static/img/covid11.png" alt="">
             </div>
           </div>
           <div>

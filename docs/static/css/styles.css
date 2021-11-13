@@ -153,27 +153,12 @@ h1 {
   transition: ease-in-out .4s;
 }
 
-.content .section .cards .card:hover {
-  background-color: var(--color-2);
-  opacity: 0.8;
-}
-
 .content .section .cards .card.card-second {
   background-color: var(--color-3);
 }
 
-.content .section .cards .card.card-second:hover {
-  background-color: var(--color-3);
-  opacity: 0.5;
-}
-
 .content .section .cards .card.card-third {
   background-color: var(--color-4);
-}
-
-.content .section .cards .card.card-third:hover {
-  background-color: var(--color-4);
-  opacity: 0.5;
 }
 
 .content .section .cards .card span {
@@ -185,10 +170,6 @@ h1 {
 
 .content .section .cards .card p {
   color: var(--color-1);
-}
-
-.content .section .cards .card:hover {
-  background-color: var(--color-3);
 }
 
 .worldmap {

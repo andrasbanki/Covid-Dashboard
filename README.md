@@ -1,12 +1,14 @@
 # Covid Dashboard
 
-![Screenshot](https://github.com/andrasbanki/Covid-Dashboard/raw/main/frontend/static/img/CovidDashboard.png)
+![Screenshot](https://github.com/andrasbanki/Covid-Dashboard/raw/main/docs/static/img/CovidDashboard.png)
 
 ## Description
 
 A small dashboard implemented using HTML, CSS, and JavaScript that loads data from CSV-files and enables the viewing of data points in detail.
 
 ## Project link
+
+https://andrasbanki.github.io/Covid-Dashboard/
 
 ## Quick Start
 

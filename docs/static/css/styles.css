@@ -1,0 +1,364 @@
+@import url('https://fonts.googleapis.com/css2?family=Play&display=swap');
+
+:root{
+  --color-1: #fff;
+  --color-2: #FF808B;
+  --color-3: #9CB6FF;
+  --color-4: #7393ff;  
+  --color-5: #000080;
+  --color-6: #9292AD;	
+  --color-7: #F7F9F9;	
+
+  --navWidth: 280px;
+  --navPadding: 20px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Play', sans-serif;
+  font-size: 20px;
+}
+
+h1 {
+  text-align: center;
+  font-size: 50px;
+  margin-top: 100px;
+  color: #9292AD;
+}
+
+/* NAV */
+
+.nav {
+  display: block;
+  width: var(--navWidth);
+  height: 100%;
+  padding: var(--navPadding);
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: var(--color-3);
+}
+
+.nav .logo {
+  width: 100%;
+  text-transform: uppercase;
+  color:var(--color-1);
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  transition: all .4s ease-in-out;
+  padding-bottom: 20px;
+  border-bottom: 5px solid #fff;
+  margin-bottom: 85px;
+  margin-top: 65px;
+}
+
+.nav .logo .logo-decor {
+  display: block;
+  margin-right: 20px;
+}
+
+.nav .logo .logo-text {
+  display: block;
+  font-weight: 900;
+  font-size: 22px;
+}
+
+.nav .menu {
+  list-style: none;
+  display: block;
+  margin: 0;
+  margin-right: calc(var(--navPadding) * -1);
+  padding: 0;
+}
+
+.nav .menu li {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.nav .menu li a {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  color: var(--color-1);
+  text-transform: uppercase;
+  font-size: 19px;
+  padding: 20px 0;
+  padding-right: 20px;
+  text-decoration: none;
+  border-radius: 30px 0 0 30px;
+  transition: all ease-in-out .4s;
+}
+
+.nav .menu li a:hover {
+  color: var(--color-3);
+  background-color: var(--color-7);
+}
+
+.nav .menu li.active a{
+  color: var(--color-6);
+  background-color: var(--color-7);
+}
+
+/* CONTENT */
+
+.content {
+  width: calc(100% - var(--navWidth));
+  height: 100%;
+  min-height: 100vh;
+  position: relative;
+  float: right;
+  background-color: var(--color-7);
+}
+
+/* SECTION */
+
+.content .section {
+  width: 100%;
+  height: 100%;
+  padding: 5%;
+}
+
+.content .section .container-content {
+  padding-left: 5%;
+}
+
+.content .section .container-content .col {
+  margin-bottom: 20px;
+}
+
+.content .section .container-content .col-12 {
+  margin-bottom: 20px;
+}
+
+/* SECTION CARDS */
+
+.content .section .cards .card {
+  width: 100%;
+  height: 90%;
+  padding: 5% 5%;
+  background-color: var(--color-2);
+  border: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  transition: ease-in-out .4s;
+}
+
+.content .section .cards .card:hover {
+  background-color: var(--color-2);
+  opacity: 0.8;
+}
+
+.content .section .cards .card.card-second {
+  background-color: var(--color-3);
+}
+
+.content .section .cards .card.card-second:hover {
+  background-color: var(--color-3);
+  opacity: 0.5;
+}
+
+.content .section .cards .card.card-third {
+  background-color: var(--color-4);
+}
+
+.content .section .cards .card.card-third:hover {
+  background-color: var(--color-4);
+  opacity: 0.5;
+}
+
+.content .section .cards .card span {
+  display: block;
+  font-size: 32px;
+  color: var(--color-1);
+  font-weight: 900;
+}
+
+.content .section .cards .card p {
+  color: var(--color-1);
+}
+
+.content .section .cards .card:hover {
+  background-color: var(--color-3);
+}
+
+.worldmap {
+  margin-top: 30px;
+}
+  
+/* SECTION CHARTS */
+
+.content  .charts .card {
+  width: 100%;
+  height: 100%;
+  padding: 5px;
+  border-radius: 8px;
+  border: 0;
+  transition: ease-in-out .4s;
+}
+
+.content .charts .card canvas {
+  background-color: var(--color-1);
+  padding: 10px;
+  border-radius: 8px;
+  width: 100%;
+  height: 100%;
+}
+
+.content .charts .card:hover {
+  background-color: var(--color-4);
+}
+
+/*  MILESTONES  */
+
+#milestones {
+  margin-top: 80px;
+  padding: 40px;
+}
+
+#milestones .st {
+  display: flex;
+  padding: 40px 0;
+  position: relative;
+  flex-direction: column-reverse !important;
+  align-items: center;
+  padding: 50px 12%;
+}
+
+#milestones .st > div:first-child div p {
+  color:var(--color-6);
+  padding: 40px;
+}
+
+#milestones .st > div:nth-child(2) div {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  overflow: hidden;
+  position: relative;
+}
+
+#milestones .st img {
+  height: 190px;
+  object-fit: contain;
+}
+
+#milestones .st > div:nth-child(2):after,
+#milestones .st > div:nth-child(2):before {
+  content: "";
+  position: absolute;
+  width: 4px;
+  left: 50%;
+  background: var(--color-6);
+}
+
+#milestones .st > div:nth-child(2):before {
+  top: 0;
+  height: 140px;
+  border-radius: 0 0 5px 5px;
+}
+
+#milestones .st > div:nth-child(2):after {
+  bottom: 0;
+  border-radius: 5px 5px 0 0;
+}
+
+#milestones .st:first-child {
+  padding-top: 20px;
+}
+
+#milestones .st > div {
+  width: 100%;
+}
+
+#milestones .st > div:first-child div {
+  padding: 0 !important;
+  text-align: center !important;
+}
+
+#milestones .st > div:first-child div span {
+  font-size: 30px;
+  color: var(--color-6);
+}
+
+#milestones .st > div:nth-child(2) {
+  width: 190px;
+  height: 190px;
+  margin: 40px 0;
+}
+
+#milestones .st > div:nth-child(2):after,
+#milestones .st > div:nth-child(2):before {
+  width: 4px;
+  height: 70px;
+}
+
+#milestones .st > div:nth-child(2):after {
+  top: auto;
+}
+   
+#milestones .st > div:last-child p {
+  padding: 0 !important;
+  font-size: 40px;
+  text-align: center !important;
+  margin-top: 70px;
+  color: #9292AD;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 1024px ) {
+  .nav {
+    width: 200px;
+  }
+
+  .content{
+    width: calc(100% - 200px);
+  }
+  
+  .content .section{
+    padding: 30px 15px;
+  }
+
+  .nav .logo {
+    display: block;
+  }
+
+  .milestones{
+    width: calc(100% - 200px);
+    padding: 30px 15px;
+    margin-bottom: 30px;
+  }
+
+  .nav .menu li span,
+  .logo {
+    display: block;
+  }
+
+  .nav .logo .bi{
+    margin: 0;
+  }
+
+  .logo-text {
+    font-size: 18px;
+  }
+
+  .nav .menu li {
+    padding: 10px 0;
+    margin: 0;
+  }
+
+  .nav .menu li a {
+    padding: 10px;
+    font-size: 16px;
+  }
+}

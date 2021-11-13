@@ -8,9 +8,9 @@ A small dashboard implemented using HTML, CSS, and JavaScript that loads data fr
 
 ## Project link
 
-https://andrasbanki.github.io/Covid-Dashboard/
+https://andrasbanki-covid-dashoard.herokuapp.com/
 
-## Quick Start
+## Quick Start Locally
 
 ### Install dependencies
 
@@ -35,6 +35,6 @@ http://localhost:8000/
 -   HTML
 -   CSS
 -   Javascript
--   Express
+-   Node/Express.js
 -   Chart.js
 -   D3.js

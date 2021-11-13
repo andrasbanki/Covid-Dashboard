@@ -2,7 +2,7 @@ import Global from "./views/Global.js";
 import Germany from "./views/Germany.js";
 import Austria from "./views/Austria.js";
 import Switzerland from "./views/Switzerland.js";
-import Hungary from "./views/Hungary.js"; 
+import Hungary from "./views/Hungary.js";
 
 const navigateTo = url => {
   history.pushState(null, null, url);
@@ -32,13 +32,14 @@ const getData = (country) => {
       data: {
         labels: labels,
         datasets: [{
-          label: "New Cases",
+          label: "New Cases  -  for more information about the cases, click on the points",
           data: cases,
           fill: false,
-          pointRadius: 2,
+          pointRadius: 1,
           pointHoverRadius: 0.1,
           pointBackgroundColor: '#FF808B',
-          borderColor: '#9CB6FF',
+          pointBorderColor: '#FF808B',
+          borderColor: '#9292AD',
           borderWidth: 1,
         }]
       }
@@ -49,12 +50,14 @@ const getData = (country) => {
       data: {
         labels: labels,
         datasets: [{
-          label: "New Deaths",
+          label: "New Deaths  -  for more information about the deaths, click on the points",
           data: deaths,
           fill: false,
-          pointRadius: 2,
+          pointRadius: 0.5,
           pointHoverRadius: 0.1,
-          borderColor: '#FF808B',
+          pointBackgroundColor: '#FF808B',
+          pointBorderColor: '#FF808B',
+          borderColor: '#9292AD',
           borderWidth: 1,
         }]
       }
@@ -65,20 +68,82 @@ const getData = (country) => {
       data: {
         labels: labels,
         datasets: [{
-          label: "Total Tests",
+          label: "Total Tests  -  for more information about the tests, click on the points",
           data: tests,
           fill: false,
-          pointRadius: 2,
-          pointHoverRadius: 0.1,
-          borderColor: '#FF808B',
+          pointBackgroundColor: '#FF808B',
+          pointBorderColor: '#FF808B',
+          borderColor: '#9292AD',
           borderWidth: 1,
+          pointBorderWidth: 1,
+          pointRadius: 0.1,
+          pointHoverRadius: 0.1,
         }]
       }
     };
 
-    let chart1 = new Chart(document.getElementById('chart1'), optionCases);
-    let chart2 = new Chart(document.getElementById('chart2'), optionDeaths);
-    let chart3 = new Chart(document.getElementById('chart3'), optionTests);
+    const ctxCases = document.getElementById('chart1');
+
+    if (ctxCases) {
+      const chart1 = new Chart(
+        ctxCases,
+        optionCases
+      );
+
+      function clickHandlerCases(click){
+        const pointsCases = chart1.getElementsAtEventForMode(click, 'nearest', { intersect: true }, true);
+        if (pointsCases.length) {
+          const firstPoint = pointsCases[0];
+          const value = chart1.data.datasets[firstPoint.datasetIndex].data[firstPoint.index];
+
+          window.open("https://ourworldindata.org/explorers/coronavirus-data-explorer?facet=none&Metric=Confirmed+cases&Interval=7-day+rolling+average&Relative+to+Population=true&Align+outbreaks=false&country=USA~AUS~ITA~CAN~DEU~GBR~FRA", "_blank");
+        }
+      }
+
+      ctxCases.onclick = clickHandlerCases;
+    }
+
+    const ctxDeaths = document.getElementById('chart2');
+
+    if(ctxDeaths) {
+      const chart2 = new Chart(
+        ctxDeaths,
+        optionDeaths,
+      );
+
+      function clickHandlerDeaths(click){
+        const pointsDeaths = chart2.getElementsAtEventForMode(click, 'nearest', { intersect: true }, true);
+        if (pointsDeaths.length) {
+          const firstPoint = pointsDeaths[0];
+          const value = chart2.data.datasets[firstPoint.datasetIndex].data[firstPoint.index];
+
+          window.open("https://ourworldindata.org/explorers/coronavirus-data-explorer?facet=none&Metric=Confirmed+deaths&Interval=7-day+rolling+average&Relative+to+Population=true&Align+outbreaks=false&country=USA~AUS~ITA~CAN~DEU~GBR~FRA", "_blank");
+        }
+      }
+
+      ctxDeaths.onclick = clickHandlerDeaths;
+    }
+
+    const ctxTests = document.getElementById('chart3');
+
+    if(ctxTests) {
+      const chart3 = new Chart(
+        ctxTests,
+        optionTests,
+      );
+
+      function clickHandlerTests(click){
+        const pointsTests = chart3.getElementsAtEventForMode(click, 'nearest', { intersect: true }, true);
+        if (pointsTests.length) {
+          const firstPoint = pointsTests[0];
+          const value = chart3.data.datasets[firstPoint.datasetIndex].data[firstPoint.index];
+
+          window.open("https://ourworldindata.org/explorers/coronavirus-data-explorer?facet=none&Metric=Tests&Interval=7-day+rolling+average&Relative+to+Population=true&Align+outbreaks=false&country=USA~AUS~ITA~CAN~DEU~GBR~FRA", "_blank");
+        }
+      }
+
+      ctxTests.onclick = clickHandlerTests;
+    }
 
   });
 

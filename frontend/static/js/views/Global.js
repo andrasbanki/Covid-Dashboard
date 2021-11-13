@@ -10,12 +10,10 @@ export default class extends AbstractView {
 
     return `
     <nav class="nav">
-    <a href="/" class="logo">
-      <img src="static/img/logo.png" alt="Covid19 Dashboard Logo">
-      <span>Covid19 Dashboard</span>
-    </a>
-
-    <hr>
+      <a href="/" class="logo">
+        <img src="static/img/logo.png" alt="Covid19 Dashboard Logo" class="logo-decor">
+        <span class="logo-text">Covid19<br> Dashboard</span>
+      </a>
  
     <ul class="menu">
       <li class="active"><a href="/" data-link>Global</a></li>
@@ -31,7 +29,7 @@ export default class extends AbstractView {
     <section class="section">
       <div class="container-md container-content cards row">
         <div class="col-xl col-lg col">
-          <div class="card shadow ">
+          <div class="card card-first shadow">
             <div class="desc">
               <p>Global Total Cases</p>
               <span>248.467.363</span>
@@ -40,7 +38,7 @@ export default class extends AbstractView {
         </div>
 
         <div class="col-xl col-lg col">
-          <div class="card shadow">
+          <div class="card card-second shadow">
             <div class="desc">
               <p>Global Total Deaths</p>
               <span>5.027.183</span>
@@ -49,9 +47,9 @@ export default class extends AbstractView {
         </div>
 
         <div class="col-xl col-lg col">
-          <div class="card shadow">
+          <div class="card card-third shadow">
             <div class="desc">
-              <p>Share of people fully vaccinated against COVID-19</p>
+              <p>Global Total Number of People Fully Vaccinated</p>
               <span>3.111.302.856</span>
             </div>
           </div>
@@ -92,7 +90,7 @@ export default class extends AbstractView {
         </div>
       </div>
       <div>
-        <p>Chinese authorities inform WHO’s of pneumonia cases in Wuhan City</p>
+        <p>Chinese authorities inform WHO of pneumonia cases in Wuhan City</p>
       </div>
     </div>
 
@@ -119,7 +117,7 @@ export default class extends AbstractView {
         <div>
           <span>Feb. 10, 2020</span>
           <p>More and more countries were starting to see their first cases, but much of the world's attention was still focused on
-          China..</p>
+          Chinaau.</p>
         </div>
       </div>
       <div>
@@ -196,7 +194,7 @@ export default class extends AbstractView {
       </div>
       <div>
         <div>
-          <img src="/static/img/covid7.png" alt="">
+          <img src="/static/img/covid6.jpeg" alt="">
         </div>
       </div>
       <div>
@@ -254,7 +252,7 @@ export default class extends AbstractView {
     </div>
   </div>
   <div>
-    <p>Globally, reported cases of COVID-19 surpass 200 million.</p>
+    <p>Globally, reported cases of COVID-19 surpass 200 million</p>
   </div>
 </div>
 

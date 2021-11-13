@@ -10,13 +10,11 @@ export default class extends AbstractView {
 
     return `
     <nav class="nav">
-    <a href="/" class="logo">
-      <img src="static/img/logo.png" alt="Covid19 Dashboard Logo">
-      <span>Covid19 Dashboard</span>
-    </a>
+      <a href="/" class="logo">
+        <img src="static/img/logo.png" alt="Covid19 Dashboard Logo" class="logo-decor">
+        <span class="logo-text">Covid19<br> Dashboard</span>
+      </a>
 
-    <hr>
- 
     <ul class="menu">
       <li><a href="/" data-link>Global</a></li>
       <li class="active"><a href="/austria" data-link>Austria</a></li>
@@ -31,7 +29,7 @@ export default class extends AbstractView {
     <section class="section">
       
           <div class="container-fluid container-content charts row">
-            <div class="col-12">
+            <div class="col-xl col-lg col">
               <div class="card shadow">
                 <canvas class="shadow" id="chart1"></canvas>
               </div>
@@ -39,13 +37,13 @@ export default class extends AbstractView {
           </div>
 
           <div class="container-fluid container-content charts row">           
-              <div class="col-6">
+              <div class="col-xl col-lg col">
                 <div class="card shadow">
                   <canvas class="shadow" id="chart2"></canvas>
                 </div>
               </div>
 
-              <div class="col-6">
+              <div class="col-xl col-lg col">
                 <div class="card shadow">
                   <canvas class="shadow" id="chart3"></canvas>
                 </div>

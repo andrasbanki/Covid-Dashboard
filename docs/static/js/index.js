@@ -13,6 +13,10 @@ const navigateTo = url => {
 
 const getData = (country) => {
 
+  if (country === "Global") {
+    return true;
+  };
+
   d3.csv(`/static/data/${country}_Covid.csv`).then(function(loadedData) {
     
     let cases = [];

@@ -26,8 +26,9 @@ body {
 
 h1 {
   text-align: center;
-  font-size: 70px;
+  font-size: 50px;
   margin-top: 100px;
+  color: #9292AD;
 }
 
 /* NAV */
@@ -45,7 +46,6 @@ h1 {
 
 .nav .logo {
   width: 100%;
-  margin-bottom: 35px;
   text-transform: uppercase;
   color:var(--color-1);
   display: flex;
@@ -54,7 +54,8 @@ h1 {
   transition: all .4s ease-in-out;
   padding-bottom: 20px;
   border-bottom: 5px solid #fff;
-  margin-bottom: 40px;
+  margin-bottom: 85px;
+  margin-top: 65px;
 }
 
 .nav .logo .logo-decor {
@@ -102,7 +103,7 @@ h1 {
 }
 
 .nav .menu li.active a{
-  color: var(--color-5);
+  color: var(--color-6);
   background-color: var(--color-7);
 }
 
@@ -137,14 +138,6 @@ h1 {
   margin-bottom: 20px;
 }
 
-
-.content .section .container-content .title {
-  font-size: 22px;
-  font-weight: 900;
-  color: var(--color-2);
-  margin-bottom: 30px;
-}
-
 /* SECTION CARDS */
 
 .content .section .cards .card {
@@ -160,12 +153,27 @@ h1 {
   transition: ease-in-out .4s;
 }
 
+.content .section .cards .card:hover {
+  background-color: var(--color-2);
+  opacity: 0.8;
+}
+
 .content .section .cards .card.card-second {
-  background-color: var(--color-4)
+  background-color: var(--color-3);
+}
+
+.content .section .cards .card.card-second:hover {
+  background-color: var(--color-3);
+  opacity: 0.5;
 }
 
 .content .section .cards .card.card-third {
-  background-color: var(--color-5)
+  background-color: var(--color-4);
+}
+
+.content .section .cards .card.card-third:hover {
+  background-color: var(--color-4);
+  opacity: 0.5;
 }
 
 .content .section .cards .card span {
@@ -184,7 +192,7 @@ h1 {
 }
 
 .worldmap {
-  margin-top: 50px;
+  margin-top: 30px;
 }
   
 /* SECTION CHARTS */
@@ -198,7 +206,7 @@ h1 {
   transition: ease-in-out .4s;
 }
 
-.content  .charts .card canvas {
+.content .charts .card canvas {
   background-color: var(--color-1);
   padding: 10px;
   border-radius: 8px;
@@ -214,95 +222,96 @@ h1 {
 
 #milestones {
   margin-top: 80px;
-    padding: 40px;
+  padding: 40px;
 }
 
 #milestones .st {
-    display: flex;
-    padding: 40px 0;
-    position: relative;
-    flex-direction: column-reverse !important;
-    align-items: center;
-    padding: 50px 12%;
+  display: flex;
+  padding: 40px 0;
+  position: relative;
+  flex-direction: column-reverse !important;
+  align-items: center;
+  padding: 50px 12%;
 }
 
 #milestones .st > div:first-child div p {
-    color:var(--color-5);
-    padding: 40px;
+  color:var(--color-6);
+  padding: 40px;
 }
 
 #milestones .st > div:nth-child(2) div {
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-    overflow: hidden;
-    position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  overflow: hidden;
+  position: relative;
 }
 
 #milestones .st img {
-    height: 190px;
-    object-fit: contain;
+  height: 190px;
+  object-fit: contain;
 }
 
 #milestones .st > div:nth-child(2):after,
 #milestones .st > div:nth-child(2):before {
-    content: "";
-    position: absolute;
-    width: 4px;
-    left: 50%;
-    background: rgb(14, 11, 11);
+  content: "";
+  position: absolute;
+  width: 4px;
+  left: 50%;
+  background: var(--color-6);
 }
 
 #milestones .st > div:nth-child(2):before {
-    top: 0;
-    height: 140px;
-    border-radius: 0 0 5px 5px;
+  top: 0;
+  height: 140px;
+  border-radius: 0 0 5px 5px;
 }
 
 #milestones .st > div:nth-child(2):after {
-
-    bottom: 0;
-    border-radius: 5px 5px 0 0;
+  bottom: 0;
+  border-radius: 5px 5px 0 0;
 }
 
 #milestones .st:first-child {
-    padding-top: 20px;
+  padding-top: 20px;
 }
 
 #milestones .st > div {
-    width: 100%;
+  width: 100%;
 }
 
 #milestones .st > div:first-child div {
-    padding: 0 !important;
-    text-align: center !important;
+  padding: 0 !important;
+  text-align: center !important;
 }
 
 #milestones .st > div:first-child div span {
-    font-size: 30px;
+  font-size: 30px;
+  color: var(--color-6);
 }
 
 #milestones .st > div:nth-child(2) {
-    width: 190px;
-    height: 190px;
-    margin: 40px 0;
+  width: 190px;
+  height: 190px;
+  margin: 40px 0;
 }
 
 #milestones .st > div:nth-child(2):after,
 #milestones .st > div:nth-child(2):before {
-    width: 4px;
-    height: 70px;
+  width: 4px;
+  height: 70px;
 }
 
 #milestones .st > div:nth-child(2):after {
-    top: auto;
+  top: auto;
 }
    
 #milestones .st > div:last-child p {
-    padding: 0 !important;
-    font-size: 40px;
-    text-align: center !important;
-    margin-top: 70px;
+  padding: 0 !important;
+  font-size: 40px;
+  text-align: center !important;
+  margin-top: 70px;
+  color: #9292AD;
 }
 
 /* RESPONSIVE */
@@ -311,9 +320,11 @@ h1 {
   .nav {
     width: 200px;
   }
+
   .content{
     width: calc(100% - 200px);
   }
+  
   .content .section{
     padding: 30px 15px;
   }

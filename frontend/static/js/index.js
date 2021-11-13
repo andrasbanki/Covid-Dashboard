@@ -9,6 +9,8 @@ const navigateTo = url => {
   router();
 };
 
+// CHARTS
+
 const getData = (country) => {
 
   d3.csv(`static/data/${country}_Covid.csv`).then(function(loadedData) {
@@ -82,6 +84,8 @@ const getData = (country) => {
       }
     };
 
+// CHART HYPERLINKS ON POINTS
+
     const ctxCases = document.getElementById('chart1');
 
     if (ctxCases) {
@@ -148,6 +152,8 @@ const getData = (country) => {
   });
 
 };
+
+// ROUTING
 
 const router = async () => {
   const routes = [
